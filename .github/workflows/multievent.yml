@@ -18,7 +18,7 @@ jobs:
             - name: "running on main push"
               run: echo "running on main branch"
     on-pull-request-opened:
-        if: github.event_name == 'pull_request' &&  github.event.action == 'opened'
+        if: github.event_name == 'pull_request'
         runs-on: ubuntu-latest
         steps:
             - name: "running on pull request opened"
