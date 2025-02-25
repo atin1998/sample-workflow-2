@@ -17,7 +17,7 @@ jobs:
         steps:
             - name: "running on main push"
               run: echo "running on main branch"
-    on-pull-request-opened:
+    on-pull-request:
         if: github.event_name == 'pull_request'
         runs-on: ubuntu-latest
         steps:
