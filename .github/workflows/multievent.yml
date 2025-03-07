@@ -3,6 +3,7 @@ on:
     push:
         branches: 
             - main
+            - testttt_branch
     pull_request:
         branches:
             - main
@@ -17,11 +18,16 @@ jobs:
         steps:
             - name: "running on main push"
               run: echo "running on main branch"
-    on-pull-request-opened:
-        if: github.event_name == 'pull_request' &&  github.event.action == 'opened'
+    on-pull-request:
+        if: github.event_name == 'pull_request'
         runs-on: ubuntu-latest
-
-        
         steps:
             - name: "running on pull request opened"
               run: echo "pull request opened"
+
+
+
+
+
+
+              
